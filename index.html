@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antech Cell | Celulares, Assistência Técnica e Acessórios em São João da Boa Vista</title>
+<meta name="description" content="Antech Cell: venda de smartphones novos e seminovos, assistência técnica especializada (tela, bateria, conector, placa) e acessórios em São João da Boa Vista - SP.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#050505;
+  --bg-2:#0d0d0d;
+  --card:#141414;
+  --line:rgba(255,255,255,.09);
+  --text:#f5f5f5;
+  --muted:#b3b3b3;
+  --gold:#ffd400;
+  --gold-2:#ffe866;
+  --cyan:#ffc400;
+  --blue:#ffd400;
+  --wa:#25d366;
+  --radius:18px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15;letter-spacing:-.02em}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--gold))}
+.section-title{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:14px}
+.section-sub{color:var(--muted);max-width:640px;font-size:1.05rem}
+.grad{background:linear-gradient(90deg,var(--gold),var(--gold-2) 55%,#fff6c2);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ===== Botões ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 26px;border-radius:999px;font-weight:600;font-size:1rem;
+  border:1px solid transparent;cursor:pointer;transition:.3s ease;
+  font-family:'Inter',sans-serif;
+}
+.btn svg{width:20px;height:20px;flex-shrink:0}
+.btn-wa{background:var(--wa);color:#04140a;box-shadow:0 10px 30px -8px rgba(37,211,102,.55)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(37,211,102,.75)}
+.btn-ghost{border-color:rgba(255,255,255,.22);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ===== Header ===== */
+header{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  transition:background .35s, border-color .35s, backdrop-filter .35s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(5,5,5,.85);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Sora';font-weight:800;font-size:1.15rem;letter-spacing:.04em}
+.brand-logo{
+  width:46px;height:46px;border-radius:12px;background:#000;
+  border:1px solid rgba(255,212,0,.4);overflow:hidden;display:grid;place-items:center;
+}
+.brand-logo img{width:100%;height:100%;object-fit:contain}
+.brand span b{color:var(--gold)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-size:.95rem;color:var(--muted);transition:.25s;position:relative}
+.nav-links a:hover{color:var(--text)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{padding:10px 18px;font-size:.9rem}
+.menu-btn{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px}
+.menu-btn svg{width:28px;height:28px}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg::before{
+  content:"";position:absolute;width:780px;height:780px;top:-260px;right:-200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,196,0,.18),transparent 65%);filter:blur(10px);
+  animation:float 12s ease-in-out infinite;
+}
+.hero-bg::after{
+  content:"";position:absolute;width:620px;height:620px;bottom:-260px;left:-180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,212,0,.16),transparent 65%);
+  animation:float 14s ease-in-out infinite reverse;
+}
+.grid-lines{
+  position:absolute;inset:0;opacity:.35;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%);
+}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,30px)}}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.status-pill{
+  display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:.85rem;color:var(--muted);margin-bottom:22px;
+}
+.dot{width:9px;height:9px;border-radius:50%;background:#666666}
+.dot.open{background:var(--wa);box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2s infinite}
+.dot.closed{background:#ef4444}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.1rem);font-weight:800;margin-bottom:22px}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:560px;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px}
+.hero-tags span{
+  font-size:.82rem;padding:6px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.02)
+}
+.hero-visual{position:relative}
+.frame{
+  position:relative;border-radius:24px;padding:10px;
+  background:linear-gradient(140deg,rgba(255,212,0,.55),rgba(255,196,0,.35) 50%,rgba(255,255,255,.05));
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 60px -20px rgba(255,196,0,.35);
+}
+/* Moldura que mostra a imagem INTEIRA (contain) com fundo desfocado da própria imagem */
+.img-fit{
+  position:relative;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:4/5;
+}
+.img-fit .blur{position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(24px) brightness(.45);transform:scale(1.1)}
+.img-fit img{position:relative;width:100%;height:100%;object-fit:contain;z-index:1}
+.img-fit.missing{display:grid;place-items:center}
+.img-fit.missing::after{
+  content:attr(data-label);color:var(--muted);font-size:.9rem;text-align:center;padding:20px;
+}
+.floating-badge{
+  position:absolute;z-index:3;left:-22px;top:36px;padding:14px 18px;border-radius:14px;
+  background:rgba(14,14,14,.92);border:1px solid var(--line);backdrop-filter:blur(10px);
+  display:flex;align-items:center;gap:12px;font-size:.9rem;
+  animation:bob 5s ease-in-out infinite;
+}
+.floating-badge strong{display:block;font-family:'Sora';color:var(--gold)}
+.floating-badge small{color:var(--muted)}
+.floating-badge .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(255,212,0,.12);color:var(--gold)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ===== Cards com brilho reativo ===== */
+.glow-card{
+  position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:transform .4s ease,border-color .4s ease;
+  --mx:50%;--my:50%;
+}
+.glow-card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(420px circle at var(--mx) var(--my),rgba(255,196,0,.16),transparent 45%);
+}
+.glow-card::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(300px circle at var(--mx) var(--my),rgba(255,212,0,.9),transparent 50%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+}
+.glow-card:hover{transform:translateY(-6px)}
+.glow-card:hover::before,.glow-card:hover::after{opacity:1}
+
+/* ===== Serviços ===== */
+.services{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.section-head{margin-bottom:54px}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.service .img-fit{aspect-ratio:16/10;border-radius:0}
+.service-body{padding:26px 26px 30px;position:relative;z-index:1}
+.service-icon{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:linear-gradient(135deg,rgba(255,212,0,.18),rgba(255,196,0,.12));color:var(--gold);
+  border:1px solid rgba(255,212,0,.25);
+}
+.service-icon svg{width:24px;height:24px}
+.service h3{font-size:1.3rem;margin-bottom:10px}
+.service p{color:var(--muted);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chips span{font-size:.8rem;padding:5px 12px;border-radius:999px;background:rgba(255,196,0,.08);color:var(--cyan);border:1px solid rgba(255,196,0,.2)}
+.link-wa{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--gold);font-size:.95rem}
+.link-wa:hover{gap:12px}
+.link-wa{transition:gap .25s}
+
+/* ===== Ponto de coleta Mercado Livre ===== */
+.ml{background:var(--bg-2);overflow:hidden}
+.ml::before{
+  content:"";position:absolute;width:640px;height:640px;right:-220px;top:-200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,230,0,.13),transparent 65%);pointer-events:none
+}
+.ml-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+.ml-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.ml-head .ml-badge{margin-bottom:0}
+.ml-logo{
+  width:136px;aspect-ratio:620/430;border-radius:14px;background:#ffe600;display:grid;place-items:center;padding:0;
+  box-shadow:0 10px 30px -12px rgba(255,212,0,.55);overflow:hidden;flex-shrink:0
+}
+.ml-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.ml-logo.missing{background:rgba(255,230,0,.06);border:2px dashed rgba(255,230,0,.5);box-shadow:none}
+.ml-logo.missing::after{content:"Espaço para logo do Mercado Livre";font-size:.72rem;color:#ffe600;text-align:center;line-height:1.3}
+.ml-badge{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;margin-bottom:18px;
+  background:rgba(255,230,0,.1);border:1px solid rgba(255,230,0,.4);color:#ffe600;font-weight:600;font-size:.9rem
+}
+.ml-badge svg{width:18px;height:18px}
+.ml-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 32px}
+.ml-point{padding:18px;display:flex;gap:12px;align-items:flex-start}
+.ml-point .service-icon{width:40px;height:40px;margin:0;flex-shrink:0;color:#ffe600;border-color:rgba(255,230,0,.3);background:rgba(255,230,0,.08)}
+.ml-point .service-icon svg{width:20px;height:20px}
+.ml-point h4{font-family:'Sora';font-size:.98rem;margin-bottom:2px;position:relative;z-index:1}
+.ml-point p{font-size:.88rem;color:var(--muted);position:relative;z-index:1}
+.ml-card{padding:34px}
+.ml-card h3{font-size:1.3rem;margin-bottom:6px;position:relative;z-index:1}
+.ml-card > p{color:var(--muted);margin-bottom:22px;position:relative;z-index:1}
+.ml-steps{list-style:none;display:grid;gap:18px;margin-bottom:26px;position:relative;z-index:1;counter-reset:s}
+.ml-steps li{display:flex;gap:14px;align-items:flex-start;color:var(--muted);font-size:.95rem}
+.ml-steps li::before{
+  counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+  font-family:'Sora';font-weight:700;color:#120e00;background:linear-gradient(135deg,#ffe600,var(--gold))
+}
+.ml-steps li strong{color:var(--text);display:block}
+.ml-note{font-size:.82rem;color:#8a8a8a;margin-top:16px;position:relative;z-index:1}
+.ml-card .btn{width:100%;position:relative;z-index:1}
+.ml-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;border-radius:999px;background:#0a0a0a;border:1px solid var(--line);margin-bottom:24px;position:relative;z-index:1}
+.ml-tab{
+  border:0;background:none;color:var(--muted);font-family:'Inter';font-weight:600;font-size:.92rem;
+  padding:11px 10px;border-radius:999px;cursor:pointer;transition:.25s
+}
+.ml-tab.active{background:linear-gradient(135deg,#ffe600,var(--gold));color:#120e00}
+.ml-tab:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.ml-panel{display:none;animation:fadeIn .45s ease}
+.ml-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:880px){.ml-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.ml-points{grid-template-columns:1fr}.ml-card{padding:22px}}
+
+/* ===== Seletor ===== */
+.selector-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.selector-card{padding:34px}
+.step-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:4px 0 12px;font-weight:600}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:26px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt label{
+  display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:14px;cursor:pointer;
+  border:1px solid var(--line);background:rgba(255,255,255,.02);font-size:.95rem;transition:.25s;min-height:56px;
+}
+.opt label .box{
+  width:20px;height:20px;border-radius:6px;border:2px solid #555555;flex-shrink:0;display:grid;place-items:center;transition:.25s
+}
+.opt label .box svg{width:12px;height:12px;opacity:0;color:#04140a}
+.opt input:checked + label{border-color:var(--gold);background:rgba(255,212,0,.08);box-shadow:0 0 24px -10px rgba(255,212,0,.6)}
+.opt input:checked + label .box{background:var(--gold);border-color:var(--gold)}
+.opt input:checked + label .box svg{opacity:1}
+.opt input:focus-visible + label{outline:2px solid var(--cyan);outline-offset:2px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.85rem;color:var(--muted)}
+.field input,.field textarea{
+  width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#0a0a0a;color:var(--text);
+  font-family:inherit;font-size:.95rem;transition:.25s;resize:vertical;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(255,196,0,.15)}
+.preview{
+  font-size:.88rem;color:var(--muted);background:#0a0a0a;border:1px dashed rgba(255,255,255,.12);border-radius:12px;padding:14px;margin-bottom:20px;white-space:pre-line;min-height:60px
+}
+.preview b{color:var(--text)}
+.form-hint{font-size:.85rem;color:#fca5a5;margin-top:-10px;margin-bottom:14px;display:none}
+.selector-card .btn{width:100%}
+.selector-info ul{list-style:none;margin-top:28px;display:grid;gap:16px}
+.selector-info li{display:flex;gap:14px;align-items:flex-start;color:var(--muted)}
+.selector-info li .n{
+  width:34px;height:34px;border-radius:10px;flex-shrink:0;display:grid;place-items:center;font-family:'Sora';font-weight:700;
+  background:rgba(255,196,0,.1);color:var(--cyan);border:1px solid rgba(255,196,0,.25)
+}
+.selector-info li strong{color:var(--text);display:block}
+
+/* ===== Diferenciais ===== */
+.diffs{background:var(--bg-2)}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.diff{padding:30px 24px}
+.diff .service-icon{margin-bottom:18px}
+.diff h3{font-size:1.1rem;margin-bottom:8px}
+.diff p{color:var(--muted);font-size:.95rem}
+.trust-strip{
+  margin-top:40px;padding:26px 30px;border-radius:var(--radius);border:1px solid rgba(255,212,0,.25);
+  background:linear-gradient(90deg,rgba(255,212,0,.08),rgba(255,196,0,.06));
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px
+}
+.trust-strip p{max-width:680px;color:var(--muted)}
+.trust-strip p strong{color:var(--text)}
+
+/* ===== Contato ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.info-card{padding:32px}
+.info-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0}
+.info-row .service-icon{margin:0;width:42px;height:42px}
+.info-row h4{font-family:'Sora';font-size:1rem;margin-bottom:4px}
+.info-row p,.info-row a{color:var(--muted);font-size:.95rem}
+.info-row a:hover{color:var(--gold)}
+.hours{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:6px}
+.hours td{padding:5px 0;color:var(--muted)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--gold);font-weight:600}
+.social{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+.social a{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);
+  font-size:.9rem;color:var(--text);transition:.25s
+}
+.social a:hover{border-color:var(--gold);color:var(--gold)}
+.social svg{width:18px;height:18px}
+.map-card{min-height:420px;display:flex;flex-direction:column}
+.map-card iframe{flex:1;width:100%;border:0;min-height:360px;filter:grayscale(.35) contrast(1.05)}
+.map-actions{padding:18px;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.map-actions .btn{flex:1;min-width:180px;padding:12px 18px;font-size:.92rem}
+
+/* ===== Rodapé ===== */
+footer{border-top:1px solid var(--line);padding:56px 0 30px;background:#000000}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer h4{font-family:'Sora';font-size:1rem;margin-bottom:14px}
+footer p,footer li{color:var(--muted);font-size:.92rem}
+footer ul{list-style:none;display:grid;gap:8px}
+footer ul a:hover{color:var(--gold)}
+.placeholder{
+  display:inline-block;padding:2px 8px;border-radius:6px;border:1px dashed rgba(255,212,0,.45);color:var(--gold-2);font-size:.85rem
+}
+.lgpd-note{font-size:.85rem;color:#8a8a8a;border-top:1px solid var(--line);padding-top:22px;margin-bottom:18px}
+.lgpd-note a{color:var(--cyan);cursor:pointer}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem;color:#6e6e6e}
+.signature{opacity:.75}
+.signature:hover{opacity:1;color:var(--gold)}
+
+/* ===== WhatsApp flutuante ===== */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:var(--wa);display:grid;place-items:center;color:#fff;
+  box-shadow:0 12px 30px -6px rgba(37,211,102,.6);transition:transform .3s;
+}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ring 2.4s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
+.wa-tip{
+  position:absolute;right:74px;white-space:nowrap;background:#fff;color:#111111;font-size:.85rem;font-weight:600;
+  padding:8px 14px;border-radius:10px;opacity:0;transform:translateX(10px);transition:.3s;pointer-events:none
+}
+.wa-float:hover .wa-tip{opacity:1;transform:none}
+
+/* ===== Banner de cookies ===== */
+.cookie{
+  position:fixed;left:20px;bottom:20px;z-index:70;max-width:440px;padding:22px;border-radius:16px;
+  background:rgba(14,14,14,.97);border:1px solid var(--line);backdrop-filter:blur(12px);
+  box-shadow:0 24px 60px -20px rgba(0,0,0,.9);transform:translateY(140%);transition:transform .5s ease
+}
+.cookie.show{transform:none}
+.cookie h4{font-family:'Sora';font-size:1rem;margin-bottom:8px}
+.cookie p{font-size:.86rem;color:var(--muted);margin-bottom:14px}
+.cookie-actions{display:flex;gap:10px}
+.cookie-actions .btn{padding:10px 18px;font-size:.88rem;flex:1}
+.btn-gold{background:var(--gold);color:#120e00}
+.btn-gold:hover{background:var(--gold-2)}
+
+/* ===== Modal de privacidade ===== */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{max-width:640px;max-height:85vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}
+.modal-box h3{margin-bottom:14px}
+.modal-box h4{font-family:'Sora';margin:18px 0 6px;font-size:1rem}
+.modal-box p,.modal-box li{color:var(--muted);font-size:.93rem}
+.modal-box ul{padding-left:20px}
+.modal-box .btn{margin-top:22px}
+
+/* ===== Animação de entrada ===== */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ===== Responsivo ===== */
+@media (max-width:1024px){
+  .diff-grid{grid-template-columns:repeat(2,1fr)}
+  .selector-wrap{grid-template-columns:1fr}
+}
+@media (max-width:880px){
+  .nav-links,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;gap:0;
+    background:rgba(5,5,5,.97);border-bottom:1px solid var(--line);padding:10px 20px 20px
+  }
+  .nav-links.open a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .hero-visual{max-width:460px;margin:0 auto;width:100%}
+  .floating-badge{left:10px}
+  .services-grid,.contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:30px}
+  section{padding:76px 0}
+}
+@media (max-width:560px){
+  .container{padding:0 16px}
+  .options,.fields{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .selector-card,.info-card{padding:22px}
+  .hero-actions .btn{width:100%}
+  .cookie{left:12px;right:12px;bottom:12px;max-width:none}
+  .wa-float{width:56px;height:56px;right:14px;bottom:14px}
+  .wa-tip{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="container nav">
+    <a href="#inicio" class="brand" aria-label="Antech Cell - início">
+      <div class="brand-logo"><img src="img/logo.jpg" alt="Logo Antech Cell" onerror="this.style.display='none'"></div>
+      <span>ANTECH <b>CELL</b></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#mercadolivre">Mercado Livre</a></li>
+      <li><a href="#orcamento">Orçamento</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn-wa nav-cta wa-link" data-msg="Olá, Antech Cell! Vim pelo site e gostaria de atendimento." href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4z"/></svg>
+      WhatsApp
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"><div class="grid-lines"></div></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="status-pill reveal"><span class="dot" id="statusDot"></span><span id="statusText">Verificando horário...</span></div>
+      <h1 class="reveal d1">Seu celular <span class="grad">novo, consertado</span> e equipado em um só lugar.</h1>
+      <p class="lead reveal d2">Smartphones novos e seminovos, assistência técnica especializada e acessórios de qualidade em São João da Boa Vista. Atendimento rápido, orçamento transparente e garantia nos serviços.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-wa wa-link" data-msg="Olá, Antech Cell! Vim pelo site e gostaria de atendimento." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#orcamento">Montar meu pedido</a>
+      </div>
+      <div class="hero-tags reveal d3">
+        <span>iPhone</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span><span>Troca de tela</span><span>Bateria</span><span style="color:#ffe600;border-color:rgba(255,230,0,.35)">📦 Coleta e retirada Mercado Livre</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal d2">
+      <div class="frame">
+        <div class="img-fit" data-label="Insira a imagem em img/banner.jpg">
+          <div class="blur" style="background-image:url('img/banner.jpg')"></div>
+          <img src="img/banner.jpg" alt="Equipe Antech Cell realizando assistência técnica em smartphones" onerror="imgFail(this)">
+        </div>
+      </div>
+      <div class="floating-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><strong>Serviços com garantia</strong><small>Peças de qualidade</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">O que fazemos</span>
+      <h2 class="section-title reveal d1">Tudo para o seu <span class="grad">smartphone</span></h2>
+      <p class="section-sub reveal d2">Da compra do aparelho ao conserto e aos acessórios do dia a dia — com atendimento de quem entende de tecnologia.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1 -->
+      <article class="glow-card service reveal">
+        <div class="img-fit" data-label="Insira a imagem em img/aparelhos.jpg">
+          <div class="blur" style="background-image:url('img/aparelhos.jpg')"></div>
+          <img src="img/aparelhos.jpg" alt="Smartphones à venda na Antech Cell" loading="lazy" onerror="imgFail(this)">
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+          <h3>Venda de Smartphones</h3>
+          <p>Aparelhos novos e seminovos revisados das principais marcas. Consulte modelos disponíveis e condições de pagamento.</p>
+          <div class="chips"><span>iPhone</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span></div>
+          <a class="link-wa wa-link" data-msg="Olá, Antech Cell! Quero saber quais smartphones (novos e seminovos) vocês têm disponíveis." href="#">Consultar modelos →</a>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="glow-card service reveal d1">
+        <div class="img-fit" data-label="Insira a imagem em img/assistencia.jpg">
+          <div class="blur" style="background-image:url('img/assistencia.jpg')"></div>
+          <img src="img/assistencia.jpg" alt="Técnico da Antech Cell consertando a placa de um celular" loading="lazy" onerror="imgFail(this)">
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <h3>Assistência Técnica & Manutenção Rápida</h3>
+          <p>Diagnóstico preciso e reparo com equipamentos profissionais. Muitos serviços são feitos no mesmo dia, conforme a disponibilidade da peça.</p>
+          <div class="chips"><span>Troca de tela</span><span>Bateria</span><span>Conector de carga</span><span>Reparo em placa</span></div>
+          <a class="link-wa wa-link" data-msg="Olá, Antech Cell! Gostaria de um orçamento de conserto para o meu celular." href="#">Pedir orçamento →</a>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="glow-card service reveal">
+        <div class="img-fit" data-label="Insira a imagem em img/acessorios.jpg">
+          <div class="blur" style="background-image:url('img/acessorios.jpg')"></div>
+          <img src="img/acessorios.jpg" alt="Acessórios para celular: capinhas, carregadores e fones" loading="lazy" onerror="imgFail(this)">
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="1.5"/><rect x="17" y="14" width="5" height="7" rx="1.5"/></svg></div>
+          <h3>Acessórios & Películas</h3>
+          <p>Proteção e praticidade para o seu aparelho, com aplicação de película na hora.</p>
+          <div class="chips"><span>Capinhas</span><span>Carregadores turbo</span><span>Fones</span><span>Películas</span></div>
+          <a class="link-wa wa-link" data-msg="Olá, Antech Cell! Estou procurando acessórios para o meu celular." href="#">Ver acessórios →</a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="glow-card service reveal d1">
+        <div class="img-fit" data-label="Insira a imagem em img/troca.jpg">
+          <div class="blur" style="background-image:url('img/troca.jpg')"></div>
+          <img src="img/troca.jpg" alt="Avaliação de aparelho usado para troca" loading="lazy" onerror="imgFail(this)">
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div>
+          <h3>Avaliação & Troca do seu Usado</h3>
+          <p>Traga seu aparelho atual para avaliação e use o valor como parte do pagamento de outro celular.</p>
+          <div class="chips"><span>Avaliação no balcão</span><span>Upgrade facilitado</span></div>
+          <a class="link-wa wa-link" data-msg="Olá, Antech Cell! Quero avaliar meu celular usado para dar de entrada em outro." href="#">Avaliar meu aparelho →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PONTO DE COLETA MERCADO LIVRE ================= -->
+<section class="ml" id="mercadolivre">
+  <div class="container ml-grid">
+    <div>
+      <div class="ml-head reveal">
+        <!-- Logo oficial do Mercado Livre: salve o arquivo em img/logo_ml.jpg (ou img/mercadolivre-logo.png) -->
+        <div class="ml-logo">
+          <img src="img/logo_ml.jpg" alt="Logo Mercado Livre" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='img/mercadolivre-logo.png'}else{this.parentElement.classList.add('missing');this.remove()}">
+        </div>
+        <span class="ml-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>
+          Ponto de Coleta e Retirada
+        </span>
+      </div>
+      <h2 class="section-title reveal d1">Vendeu ou comprou no Mercado Livre? <span class="grad">Resolva aqui</span>, pertinho de você.</h2>
+      <p class="section-sub reveal d2">A Antech Cell é ponto de coleta e de retirada do Mercado Livre no Jardim Ipês. Vendedores despacham seus pacotes, e compradores retiram suas compras sem esperar o entregador — com horário estendido, inclusive aos domingos.</p>
+
+      <div class="ml-points">
+        <div class="glow-card ml-point reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><h4>Localização prática</h4><p>Na Av. Profa. Isette Correa Fontão, 1621.</p></div>
+        </div>
+        <div class="glow-card ml-point reveal d1">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><h4>Horário estendido</h4><p>Seg. a sáb. até 20h, domingo até 15h.</p></div>
+        </div>
+        <div class="glow-card ml-point reveal d2">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+          <div><h4>Entrega rápida</h4><p>Chegou, entregou: atendimento ágil no balcão.</p></div>
+        </div>
+        <div class="glow-card ml-point reveal d3">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><h4>Sem esperar em casa</h4><p>Retire sua compra quando for melhor para você.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glow-card ml-card reveal d1">
+      <div class="ml-tabs" role="tablist" aria-label="Escolha o que você quer fazer">
+        <button class="ml-tab active" role="tab" aria-selected="true" aria-controls="mlRetirar" id="tabRetirar">📥 Vou retirar</button>
+        <button class="ml-tab" role="tab" aria-selected="false" aria-controls="mlEnviar" id="tabEnviar">📦 Vou enviar</button>
+      </div>
+
+      <div class="ml-panel active" id="mlRetirar" role="tabpanel" aria-labelledby="tabRetirar">
+        <h3>Como retirar sua compra</h3>
+        <p>Compre online e busque aqui, no seu tempo.</p>
+        <ol class="ml-steps">
+          <li><div><strong>Escolha retirar na compra</strong>No Mercado Livre, selecione a opção de retirada em ponto e escolha a Antech Cell.</div></li>
+          <li><div><strong>Aguarde o aviso</strong>O app avisa quando seu pedido chegar à loja.</div></li>
+          <li><div><strong>Venha com os dados da compra</strong>Traga um documento com foto e o código de retirada mostrado no app.</div></li>
+          <li><div><strong>Retire no balcão</strong>Conferimos e entregamos seu pacote na hora.</div></li>
+        </ol>
+        <a class="btn btn-gold wa-link" data-msg="Olá, Antech Cell! Tenho uma compra do Mercado Livre para retirar aí. Pode confirmar se já chegou?" href="#">Confirmar se minha compra chegou</a>
+      </div>
+
+      <div class="ml-panel" id="mlEnviar" role="tabpanel" aria-labelledby="tabEnviar">
+        <h3>Como despachar seu pacote</h3>
+        <p>Simples e sem fila de agência.</p>
+        <ol class="ml-steps">
+          <li><div><strong>Embale o produto</strong>Use uma embalagem resistente e bem fechada.</div></li>
+          <li><div><strong>Cole a etiqueta</strong>Imprima a etiqueta de envio gerada na sua venda e cole de forma visível.</div></li>
+          <li><div><strong>Traga até a Antech Cell</strong>Entregue no balcão dentro do horário de funcionamento.</div></li>
+          <li><div><strong>Pronto!</strong>O Mercado Livre cuida do restante da entrega ao comprador.</div></li>
+        </ol>
+        <a class="btn btn-gold wa-link" data-msg="Olá, Antech Cell! Tenho um pacote do Mercado Livre para despachar. Posso levar agora?" href="#">Tirar dúvidas sobre o envio</a>
+      </div>
+
+      <p class="ml-note">Prazos de retirada, horários de coleta e tipos de envio aceitos seguem as regras do Mercado Livre. Em caso de dúvida, chame no WhatsApp antes de vir. Mercado Livre é marca registrada de seus respectivos titulares.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SELETOR ================= -->
+<section id="orcamento">
+  <div class="container selector-wrap">
+    <div class="selector-info">
+      <span class="eyebrow reveal">Atendimento rápido</span>
+      <h2 class="section-title reveal d1">Diga do que precisa e <span class="grad">fale direto</span> com a gente</h2>
+      <p class="section-sub reveal d2">Marque as opções, preencha o que souber e a mensagem chega pronta no nosso WhatsApp. Sem cadastro.</p>
+      <ul>
+        <li class="reveal d1"><span class="n">1</span><div><strong>Escolha o interesse</strong>Conserto, compra, acessório ou troca.</div></li>
+        <li class="reveal d2"><span class="n">2</span><div><strong>Informe o aparelho</strong>Marca, modelo e, se for conserto, o defeito.</div></li>
+        <li class="reveal d3"><span class="n">3</span><div><strong>Envie pelo WhatsApp</strong>Respondemos com orçamento e disponibilidade.</div></li>
+      </ul>
+    </div>
+
+    <div class="glow-card selector-card reveal d1">
+      <form id="leadForm" novalidate>
+        <p class="step-label">O que você precisa?</p>
+        <div class="options">
+          <div class="opt"><input type="checkbox" id="o1" value="Orçamento de conserto"><label for="o1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Orçamento de conserto</label></div>
+          <div class="opt"><input type="checkbox" id="o2" value="Comprar smartphone"><label for="o2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Comprar smartphone</label></div>
+          <div class="opt"><input type="checkbox" id="o3" value="Acessórios / películas"><label for="o3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Acessórios / películas</label></div>
+          <div class="opt"><input type="checkbox" id="o4" value="Avaliar meu usado para troca"><label for="o4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Avaliar usado p/ troca</label></div>
+          <div class="opt"><input type="checkbox" id="o5" value="Despachar pacote do Mercado Livre"><label for="o5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Despachar pacote Mercado Livre</label></div>
+          <div class="opt"><input type="checkbox" id="o6" value="Retirar compra do Mercado Livre"><label for="o6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="m5 12 5 5 9-10"/></svg></span>Retirar compra Mercado Livre</label></div>
+        </div>
+
+        <div class="fields">
+          <div class="field"><label for="fNome">Seu nome</label><input id="fNome" type="text" placeholder="Ex.: Maria" autocomplete="given-name"></div>
+          <div class="field"><label for="fModelo">Marca / modelo</label><input id="fModelo" type="text" placeholder="Ex.: Galaxy A54, iPhone 13"></div>
+          <div class="field full"><label for="fDetalhe">Detalhes (defeito, acessório, cor...)</label><textarea id="fDetalhe" rows="2" placeholder="Ex.: tela trincada, não carrega, procuro capinha..."></textarea></div>
+        </div>
+
+        <div class="preview" id="preview" aria-live="polite"></div>
+        <p class="form-hint" id="formHint">Marque pelo menos uma opção acima.</p>
+
+        <button type="submit" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4z"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="diffs" id="diferenciais">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Por que a Antech Cell</span>
+      <h2 class="section-title reveal d1">Confiança que você <span class="grad">vê no serviço</span></h2>
+    </div>
+    <div class="diff-grid">
+      <div class="glow-card diff reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Garantia nos serviços</h3>
+        <p>Todo reparo sai com garantia. O prazo e as condições são informados por escrito no orçamento.</p>
+      </div>
+      <div class="glow-card diff reveal d1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+        <h3>Peças de qualidade</h3>
+        <p>Trabalhamos com peças selecionadas e explicamos as opções disponíveis para o seu modelo.</p>
+      </div>
+      <div class="glow-card diff reveal d2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div>
+        <h3>Atendimento rápido</h3>
+        <p>Diagnóstico ágil e muitos reparos concluídos no mesmo dia. Aberto todos os dias da semana.</p>
+      </div>
+      <div class="glow-card diff reveal d3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <h3>Orçamento transparente</h3>
+        <p>Você sabe o valor e o prazo antes de autorizar. Nada é feito sem a sua aprovação.</p>
+      </div>
+    </div>
+
+    <div class="trust-strip reveal">
+      <p><strong>Técnicos na bancada, equipamentos profissionais</strong> e atendimento direto com quem faz o serviço. Venha conhecer a loja no Jardim Ipês.</p>
+      <a class="btn btn-gold" href="#contato">Como chegar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section id="contato">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Visite a loja</span>
+      <h2 class="section-title reveal d1">Endereço, horário e <span class="grad">redes sociais</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="glow-card info-card reveal">
+        <div class="info-row">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div>
+            <h4>Endereço</h4>
+            <p>Av. Profa. Isette Correa Fontão, 1621 – Jardim Ipês<br>São João da Boa Vista – SP, 13876-750</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div>
+            <h4>Telefone / WhatsApp</h4>
+            <a href="tel:+5519992327095">(19) 99232-7095</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div style="flex:1">
+            <h4>Horário de funcionamento</h4>
+            <table class="hours" id="hoursTable">
+              <tr data-d="1"><td>Segunda-feira</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="2"><td>Terça-feira</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="3"><td>Quarta-feira</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="4"><td>Quinta-feira</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="5"><td>Sexta-feira</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="6"><td>Sábado</td><td>08:00 – 20:00</td></tr>
+              <tr data-d="0"><td>Domingo</td><td>08:00 – 15:00</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></div>
+          <div>
+            <h4>Redes sociais</h4>
+            <div class="social">
+              <a href="https://www.instagram.com/antech_cell/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@antech_cell
+              </a>
+              <a class="wa-link" data-msg="Olá, Antech Cell! Vim pelo site." href="#">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8z"/></svg>WhatsApp
+              </a>
+              <!-- Adicione aqui outras redes oficiais (Facebook, TikTok etc.), se houver -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-card map-card reveal d1">
+        <iframe title="Mapa - Antech Cell" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.+Profa.+Isette+Correa+Font%C3%A3o,+1621+-+Jardim+Ipe,+S%C3%A3o+Jo%C3%A3o+da+Boa+Vista+-+SP,+13876-750&output=embed"></iframe>
+        <div class="map-actions">
+          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Profa.+Isette+Correa+Font%C3%A3o,+1621,+S%C3%A3o+Jo%C3%A3o+da+Boa+Vista+-+SP">Traçar rota</a>
+          <a class="btn btn-ghost" href="tel:+5519992327095">Ligar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#inicio" class="brand" style="margin-bottom:14px">
+          <div class="brand-logo"><img src="img/logo.jpg" alt="" onerror="this.style.display='none'"></div>
+          <span>ANTECH <b>CELL</b></span>
+        </a>
+        <p>Assistência técnica de celular, venda de smartphones e acessórios em São João da Boa Vista – SP.</p>
+        <p style="margin-top:12px">
+          <!-- Substitua pelo nome empresarial e CNPJ oficiais da loja -->
+          <span class="placeholder">Razão social: [inserir]</span>
+          <span class="placeholder">CNPJ: [inserir número oficial]</span>
+        </p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#mercadolivre">Coleta e retirada Mercado Livre</a></li>
+          <li><a href="#orcamento">Pedir orçamento</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#contato">Endereço e horário</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5519992327095">(19) 99232-7095</a></li>
+          <li><a href="https://www.instagram.com/antech_cell/" target="_blank" rel="noopener">Instagram @antech_cell</a></li>
+          <li>Av. Profa. Isette Correa Fontão, 1621 – Jardim Ipês</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lgpd-note">
+      Respeitamos a sua privacidade conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Este site não armazena os dados digitados no formulário: as informações são enviadas apenas por você, diretamente pelo WhatsApp.
+      <a id="openPrivacy">Política de privacidade e cookies</a>
+    </p>
+
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Antech Cell. Todos os direitos reservados.</span>
+      <span class="signature">Desenvolvido por T.I. Solution</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float wa-link" data-msg="Olá, Antech Cell! Vim pelo site e gostaria de atendimento." href="#" aria-label="Conversar no WhatsApp">
+  <span class="wa-tip">Fale com a gente!</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4z"/></svg>
+</a>
+
+<!-- Banner de cookies (LGPD) -->
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <h4>🍪 Privacidade e cookies</h4>
+  <p>Usamos apenas recursos essenciais para o funcionamento do site e o mapa do Google, que pode utilizar cookies próprios. Ao continuar, você concorda com nossa <a href="#" id="cookiePolicy" style="color:var(--cyan)">política de privacidade</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-gold" id="cookieAccept">Aceitar</button>
+    <button class="btn btn-ghost" id="cookieDecline">Recusar opcionais</button>
+  </div>
+</div>
+
+<!-- Modal de política -->
+<div class="modal" id="privacyModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-label="Política de privacidade">
+    <h3>Política de Privacidade e Cookies</h3>
+    <p>Esta política explica como a Antech Cell trata informações neste site, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+    <h4>Dados coletados</h4>
+    <p>O site não possui cadastro nem banco de dados. Os campos do formulário de orçamento servem apenas para montar uma mensagem que você mesmo envia pelo WhatsApp.</p>
+    <h4>Cookies</h4>
+    <ul>
+      <li>Armazenamos localmente apenas a sua escolha sobre este aviso.</li>
+      <li>O mapa incorporado é fornecido pelo Google e pode utilizar cookies conforme a política do Google.</li>
+    </ul>
+    <h4>Seus direitos</h4>
+    <p>Você pode solicitar informações, correção ou exclusão de dados compartilhados conosco pelo WhatsApp (19) 99232-7095.</p>
+    <h4>Controlador</h4>
+    <p>Antech Cell — <span class="placeholder">CNPJ: [inserir número oficial]</span> — <span class="placeholder">E-mail de contato: [inserir]</span></p>
+    <button class="btn btn-gold" id="closePrivacy">Entendi</button>
+  </div>
+</div>
+
+<script>
+/* ===== Configuração ===== */
+const WA_NUMBER = '5519992327095';
+const waURL = msg => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+/* Links de WhatsApp com mensagem pronta */
+document.querySelectorAll('.wa-link').forEach(a => {
+  a.href = waURL(a.dataset.msg || 'Olá, Antech Cell!');
+  a.target = '_blank';
+  a.rel = 'noopener';
+});
+
+/* Imagem ausente: mostra o aviso do caminho esperado */
+function imgFail(img){
+  const box = img.closest('.img-fit');
+  if(box){ box.classList.add('missing'); box.innerHTML = ''; }
+}
+
+/* ===== Header ao rolar + menu mobile ===== */
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 30);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
+}));
+
+/* ===== Animações de entrada ===== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ===== Brilho reativo nos cards ===== */
+document.querySelectorAll('.glow-card').forEach(card => {
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+});
+
+/* ===== Abas Mercado Livre (retirar / enviar) ===== */
+document.querySelectorAll('.ml-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.ml-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.ml-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+    document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
+  });
+});
+
+/* ===== Aberto / fechado (horário de Brasília) ===== */
+const HOURS = {0:[8,15],1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,20]};
+function spNow(){
+  const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+  const get = t => parts.find(p => p.type === t).value;
+  const days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  return {day:days[get('weekday')], h:(+get('hour'))%24 + (+get('minute'))/60};
+}
+function updateStatus(){
+  const {day,h} = spNow();
+  const [o,c] = HOURS[day];
+  const dot = document.getElementById('statusDot');
+  const txt = document.getElementById('statusText');
+  const open = h >= o && h < c;
+  dot.className = 'dot ' + (open ? 'open' : 'closed');
+  txt.textContent = open ? `Aberto agora · fecha às ${String(c).padStart(2,'0')}:00` : 'Fechado agora · abrimos às 08:00';
+  document.querySelectorAll('#hoursTable tr').forEach(tr => tr.classList.toggle('today', +tr.dataset.d === day));
+}
+updateStatus(); setInterval(updateStatus, 60000);
+
+/* ===== Seletor de interesse -> WhatsApp ===== */
+const form = document.getElementById('leadForm');
+const preview = document.getElementById('preview');
+const hint = document.getElementById('formHint');
+function buildMsg(){
+  const itens = [...form.querySelectorAll('input[type=checkbox]:checked')].map(i => i.value);
+  const nome = document.getElementById('fNome').value.trim();
+  const modelo = document.getElementById('fModelo').value.trim();
+  const det = document.getElementById('fDetalhe').value.trim();
+  let m = `Olá, Antech Cell!${nome ? ' Meu nome é ' + nome + '.' : ''} Vim pelo site.\n`;
+  if(itens.length) m += `\nTenho interesse em:\n${itens.map(i => '• ' + i).join('\n')}\n`;
+  if(modelo) m += `\nAparelho: ${modelo}`;
+  if(det) m += `\nDetalhes: ${det}`;
+  return {m:m.trim(), itens};
+}
+function renderPreview(){
+  const {m,itens} = buildMsg();
+  preview.innerHTML = itens.length ? '<b>Prévia da mensagem:</b>\n' + m.replace(/</g,'&lt;') : 'Marque uma ou mais opções para ver a prévia da mensagem.';
+  if(itens.length) hint.style.display = 'none';
+}
+form.addEventListener('input', renderPreview);
+form.addEventListener('change', renderPreview);
+renderPreview();
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const {m,itens} = buildMsg();
+  if(!itens.length){ hint.style.display = 'block'; return; }
+  window.open(waURL(m), '_blank', 'noopener');
+});
+
+/* ===== Cookies (LGPD) ===== */
+const cookie = document.getElementById('cookie');
+let consent = null;
+try { consent = localStorage.getItem('antech_cookie'); } catch(e){}
+if(!consent) setTimeout(() => cookie.classList.add('show'), 1200);
+function setConsent(v){
+  try { localStorage.setItem('antech_cookie', v); } catch(e){}
+  cookie.classList.remove('show');
+}
+document.getElementById('cookieAccept').onclick = () => setConsent('aceito');
+document.getElementById('cookieDecline').onclick = () => setConsent('essenciais');
+
+/* ===== Modal de privacidade ===== */
+const modal = document.getElementById('privacyModal');
+const openModal = e => { if(e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
+const closeModal = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
+document.getElementById('openPrivacy').onclick = openModal;
+document.getElementById('cookiePolicy').onclick = openModal;
+document.getElementById('closePrivacy').onclick = closeModal;
+modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
